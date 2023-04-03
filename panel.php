@@ -22,7 +22,7 @@
 		$dbname = "mainDatabase";
 		
 		// Create connection
-		$conn = mysqli_connect($servername, $username, $password, $dbname);
+		$conn = mysqli_connect($servername, $username, /*$password*/NULL, $dbname);
 		
 		// Check connection
 		if (!$conn) {
