@@ -2,8 +2,9 @@
 <html>
 <head>
 	<title>Database Control Panel</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
-<body>
+<body class="bg-dark text-white">
 	<h1>Database Control Panel</h1>
 	
 	<?php
@@ -56,8 +57,8 @@ if ($result->num_rows > 0) {
 	// output data of each row
 	echo "<br>";
 	while($row = $result->fetch_assoc()) {
-	  echo "id: " . $row["id"]. " | InstaID: " . $row["instaID"]. " | PublicID: " . $row["publicIP"]. " | Content: ".  $row["content"]. "<br>";
-	}
+		echo "id: " . $row["id"]. "<br>| UserAgent: " . $row["instaID"]. " <br>| PublicIP: " . $row["publicIP"]. "<br>| <b>Content: ".  $row["content"]. "</b><br><br>";
+	  }
   } else {
 	echo "0 results";
   }
